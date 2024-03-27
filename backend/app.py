@@ -21,7 +21,7 @@ def favicon():
 def store_data():
     data = request.json
     db.my_collection.insert_one(data)
-    return jsonify({"message": "Data stored successfully"})
+    return jsonify({"message": "Data stored successfully in the database"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
